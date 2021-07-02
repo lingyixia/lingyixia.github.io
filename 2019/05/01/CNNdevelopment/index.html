@@ -36,7 +36,8 @@
 <meta property="og:image" content="https://lingyixia.github.io/img/CNNdevelopment/InceptionV2.png">
 <meta property="og:image" content="https://lingyixia.github.io/img/CNNdevelopment/InceptionV3.png">
 <meta property="og:image" content="https://lingyixia.github.io/img/CNNdevelopment/InceptionV4.png">
-<meta property="og:updated_time" content="2021-04-04T17:05:50.328Z">
+<meta property="og:image" content="https://lingyixia.github.io/img/CNNdevelopment/densenet.jpg">
+<meta property="og:updated_time" content="2021-07-02T08:06:19.254Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CNN发展史">
 <meta name="twitter:description" content="简单记录一下CNN发展历程">
@@ -470,7 +471,17 @@ x_{l+2}=x_{l+1}+F(x_{l+1})\\
 x_L=x_l+\sum_{i=l}^{L-1}F(x_i)</script><p>则计算反响传播:</p>
 <script type="math/tex; mode=display">
 \frac{\partial L}{\partial x_l}=\frac{\partial L}{\partial x_L} \times (1+\frac{\partial \sum_{i=l}^{L-1}F(x_i)}{\partial x_l})</script><p>可以看出,此时的偏导数不再是连乘，而是连加,因此避免了梯度消失和梯度爆炸。</p>
-<h1 id="DenseNet"><a href="#DenseNet" class="headerlink" title="DenseNet"></a>DenseNet</h1><p>先不写这个了</p>
+<h1 id="DenseNet"><a href="#DenseNet" class="headerlink" title="DenseNet"></a>DenseNet</h1><p>一张图：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="\img\CNNdevelopment\densenet.jpg" alt title>
+                </div>
+                <div class="image-caption"></div>
+            </figure><br>两句话：</p>
+<ul>
+<li>每一层输入都是前面所有层输出的<code>contact</code></li>
+<li>和<code>resnet</code>唯一的不同就是<code>restnet</code>是<code>add</code>,而<code>densenet</code>用的是<code>contact</code></li>
+</ul>
 
         </div>
 
@@ -479,7 +490,7 @@ x_L=x_l+\sum_{i=l}^{L-1}F(x_i)</script><p>则计算反响传播:</p>
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2021-04-04T17:05:50.328Z" itemprop="dateUpdated">2021-04-05 01:05:50</time>
+    最后更新时间：<time datetime="2021-07-02T08:06:19.254Z" itemprop="dateUpdated">2021-07-02 16:06:19</time>
 </span><br>
 
 
